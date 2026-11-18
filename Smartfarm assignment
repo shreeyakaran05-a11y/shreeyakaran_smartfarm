@@ -192,7 +192,39 @@ Destructor called
 6 Write a C++ program to demonstrate inheritance with a suitable example.
 Inheritance is an OOP feature in which one class acquires the properties and functions of another class. It promotes code reusability.
 
+ex. Single inheritence
+#include <iostream>
+using namespace std;
 
+class Animal
+{
+public:
+    void eat()
+    {
+        cout << "Animal eats food" << endl;
+    }
+};
 
+class Dog : public Animal
+{
+public:
+    void bark()
+    {
+        cout << "Dog barks" << endl;
+    }
+};
 
+int main()
+{
+    Dog d1;
+
+    d1.eat();
+    d1.bark();
+
+    return 0;
 }
+output-
+
+Animal eats food
+Dog barks
+
