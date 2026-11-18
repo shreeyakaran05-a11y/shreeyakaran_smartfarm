@@ -1,0 +1,198 @@
+1. Define a class Student with data members
+A class is a user-defined data type that combines data members and member functions into a single unit. A class Student can store details such as roll number, name and marks.
+#include <iostream>
+using namespace std;
+
+class Student
+{
+public:
+    int roll;
+    string name;
+    float marks;
+
+    void display()
+    {
+        cout << "Roll Number: " << roll << endl;
+        cout << "Name: " << name << endl;
+        cout << "Marks: " << marks << endl;
+    }
+};
+
+int main()
+{
+    Student s1;
+
+    s1.roll = 101;
+    s1.name = "Rahul";
+    s1.marks = 85.5;
+
+    s1.display();
+
+    return 0;
+output-
+Roll Number: 101
+Name: Rahul
+Marks: 85.5
+
+2. Create a class to store employee details and display them using an object
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+public:
+    int id;
+    string name;
+    float salary;
+
+    void display()
+    {
+        cout << "Employee ID: " << id << endl;
+        cout << "Employee Name: " << name << endl;
+        cout << "Salary: " << salary << endl;
+    }
+};
+
+int main()
+{
+    Employee e1;
+
+    e1.id = 101;
+    e1.name = "Amit";
+    e1.salary = 25000;
+
+    e1.display();
+
+    return 0;
+}
+output-
+Employee ID: 101
+Employee Name: Amit
+Salary: 25000
+
+3 Write a C++ program to demonstrate the use of multiple objects of the same class.
+#include <iostream>
+using namespace std;
+
+class Student
+{
+public:
+    int roll;
+    string name;
+
+    void display()
+    {
+        cout << "Roll: " << roll << endl;
+        cout << "Name: " << name << endl;
+    }
+};
+
+int main()
+{
+    Student s1, s2, s3;
+
+    s1.roll = 1;
+    s1.name = "Aman";
+
+    s2.roll = 2;
+    s2.name = "Rahul";
+
+    s3.roll = 3;
+    s3.name = "Rohit";
+
+    s1.display();
+    s2.display();
+    s3.display();
+
+    return 0;
+}
+output-
+Roll: 1
+Name: Aman
+Roll: 2
+Name: Rahul
+Roll: 3
+Name: Rohit
+
+4 Write a C++ program to demonstrate default constructor and parameterized constructor.
+#include <iostream>
+using namespace std;
+
+class Student
+{
+public:
+    int roll;
+
+    Student()
+    {
+        roll = 0;
+        cout << "Default Constructor" << endl;
+    }
+
+    Student(int r)
+    {
+        roll = r;
+        cout << "Parameterized Constructor" << endl;
+    }
+
+    void display()
+    {
+        cout << "Roll Number: " << roll << endl;
+    }
+};
+
+int main()
+{
+    Student s1;
+    Student s2(101);
+
+    s1.display();
+    s2.display();
+
+    return 0;
+}
+5. Explain destructor with a suitable example
+A destructor is a special member function of a class that is automatically called when an object is destroyed. It is used to release resources and perform cleanup.
+- It has the same name as the class preceded by a tilde (~).
+- It has no return type.
+- It takes no arguments.
+- It is automatically called when the object goes out of scope.
+
+#include <iostream>
+using namespace std;
+
+class Student
+{
+public:
+    Student()
+    {
+        cout << "Constructor called" << endl;
+    }
+
+    ~Student()
+    {
+        cout << "Destructor called" << endl;
+    }
+};
+
+int main()
+{
+    Student s1;
+
+    cout << "Inside main function" << endl;
+
+    return 0;
+}
+
+output-
+Constructor called
+Inside main function
+Destructor called
+
+6 Write a C++ program to demonstrate inheritance with a suitable example.
+Inheritance is an OOP feature in which one class acquires the properties and functions of another class. It promotes code reusability.
+
+
+
+
+}
